@@ -1,0 +1,43 @@
+main{
+    top: 91px;
+    position: relative;
+    section{
+        padding: 6rem 0;
+    }
+    .first{
+        background-color: $main-bg-color;
+        background: url(../../images/Header_BG.png);
+        background-position-y: -90px;
+        background-size: cover;
+        h1{
+            color: $main-color;
+        }
+        &__subheader{
+            margin-top: 2.3rem;
+        }
+
+        .cards{
+            margin: 0 auto;
+            .card{
+                width: 34.5rem;
+                &__image{
+                    max-width: 4rem;
+                }
+                &__header{
+                    margin-top: 1.9rem;
+                    font-weight: bold;
+                    font-family: $Bd;
+                    font-size: 1.5rem;
+                }
+                &__text{
+                    font-family: $Md;
+                    margin-top: 1.3rem;
+                    font-size: .7rem;
+                    font-weight: 100;
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+    }
+}

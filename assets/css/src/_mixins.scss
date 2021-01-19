@@ -1,0 +1,15 @@
+/*mixins*/
+
+@mixin button($bg, $color) {
+    font-family: $Bd;
+    background: $bg;
+    color: $color;
+    border-radius: 3px;
+    &:hover {
+      background:darken($bg ,8%);
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background-color: ($bg,25%);
+    } 
+  }
