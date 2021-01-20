@@ -1,34 +1,58 @@
 main{
     top: 91px;
     position: relative;
+
     section{
-        padding: 6rem 0;
+        padding: 6rem 0 1rem;
     }
+
     .first{
-        background-color: $main-bg-color;
-        background: url(../../images/Header_BG.png);
+        background-color: #fff;
+        background: url(../../images/Header_BG.png) no-repeat;
         background-position-y: -90px;
         background-size: cover;
+        box-shadow: $box-shadow;
+        @extend .column;
+       
         h1{
             color: $main-color;
+            @extend .center;
         }
+
         &__subheader{
             margin-top: 2.3rem;
+            @extend .center;
         }
 
         .cards{
             margin: 0 auto;
+            flex-wrap: wrap;
+            @extend .row--center;
+
+            @include mobile{
+                flex-direction: column;
+            }
             .card{
-                width: 34.5rem;
+                width: 35.5rem;
+                justify-content: center;
+                padding: 0px 3.5rem;
+                @extend .center;
+                @extend .column--center;
+                @include mobile{
+                    padding: 3.5rem 0;
+                }
+
                 &__image{
                     max-width: 4rem;
                 }
+
                 &__header{
                     margin-top: 1.9rem;
                     font-weight: bold;
                     font-family: $Bd;
                     font-size: 1.5rem;
                 }
+
                 &__text{
                     font-family: $Md;
                     margin-top: 1.3rem;
@@ -38,6 +62,66 @@ main{
                 }
             }
 
+        }
+    }
+    .second{
+        &__title{
+            color:$main-color;
+        }
+        &__text{
+            margin-top: 2rem;
+            line-height: 1.6;
+        }
+    }
+    .third{
+        &__title{
+            color:$text-color;
+        }
+        &__text{
+            margin-top: 2rem;
+            line-height: 1.6;
+        }
+
+        .table{
+            margin-top: 5rem;
+            background: url('../../images/tableBG.png') no-repeat center center;
+            // background-repeat: no-repeat;
+            ul{
+                list-style: none;
+                &:first-child{ //first ul in table
+                    li{
+                        text-align: left;
+                        padding: 0
+                    }
+                }
+
+                li{  
+                    align-items: center;
+                    height: 5.35rem;
+                    width: 100%;
+                    text-align: center;
+                    display: grid;
+                    overflow: hidden;
+                    
+                    &:first-child{ //first li in each ul
+                        height: 7rem;
+                    }
+                    &:not(:last-child){ //every li except last in each ul
+                        border-bottom: 1px solid lightgrey;
+                    }
+                }
+            
+             &.second_column{
+                 background-color: rgba(255,255,255, 0.8);
+                 border-radius: 15px 0 0 15px;
+                 box-shadow: 0px 0px 24px -9px rgba(0,0,0,0.75);
+             }   
+             &.third_column{
+                 background-color: rgba(0,0,0, 0.1);
+                 border-radius: 0 15px 15px 0;
+                
+             }   
+            }
         }
     }
 }

@@ -1,83 +1,10 @@
 /*general and conf files*/
 /*This file contains all the variables*/
+/*grid*/
 /*Colors*/
+/*box-shadow*/
 /*break points*/
 /*mixins*/
-* {
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  font-size: 10px;
-}
-
-html body {
-  margin: 0;
-  padding: 0;
-}
-
-nav ul {
-  list-style: none;
-}
-
-/*typography*/
-h1, h2, h3, p, a {
-  font-family: "Bd";
-  color: #100813;
-}
-
-h1 {
-  font-size: 3.8rem;
-}
-
-p {
-  font-size: 1.4rem;
-  line-height: 1.3;
-}
-
-a {
-  text-decoration: none;
-}
-
-/*grid*/
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.row__center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: auto;
-}
-
-.column__center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.center {
-  text-align: center;
-}
-
 /*-----------------------------
 fonts
 ------------------------------*/
@@ -104,6 +31,127 @@ fonts
 /*-----------------------------
 /fonts 
 ------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Bd";
+}
+
+html {
+  font-size: 10px;
+}
+
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+/*typography*/
+h1, h2, h3, p, a, li {
+  color: #100813;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+.heading {
+  letter-spacing: 1;
+}
+
+.heading__small {
+  font-size: 1.9rem;
+}
+
+.heading__big {
+  font-size: 3rem;
+}
+
+.heading__huge {
+  font-size: 3rem;
+}
+
+p, li {
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main_color {
+  color: #9000ff;
+}
+
+/*utils*/
+.center, main .first h1, main .first__subheader, main .first .cards .card {
+  text-align: center;
+}
+
+/*grid*/
+.container {
+  padding: 6rem 4rem 1rem;
+  max-width: 77rem;
+  text-align: center;
+  margin: auto;
+}
+
+.row, .row--center, .header .subnav, .header .subnav__menu, main .first .cards, .header .topnav, .header .topnav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.row--center, .header .subnav, .header .subnav__menu, main .first .cards {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.column, .column--center, main .first .cards .card, main .first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: auto;
+}
+
+.column--center, main .first .cards .card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.col-3 {
+  width: 19.25rem;
+}
+
+.col-4 {
+  width: 25.66667rem;
+}
+
+.col-5 {
+  width: 32.08333rem;
+}
+
+.col-6 {
+  width: 38.5rem;
+}
+
 .header-up {
   top: -6.1rem !important;
 }
@@ -113,8 +161,8 @@ fonts
   position: fixed;
   height: auto;
   top: 0px;
-  -webkit-transition: top 0.5s ease-in-out;
-  transition: top 0.5s ease-in-out;
+  -webkit-transition: top 0.6s ease-in-out;
+  transition: top 0.6s ease-in-out;
   width: 100%;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
@@ -181,7 +229,7 @@ fonts
 }
 
 .header .subnav__menu {
-  width: 37.5%;
+  width: 70rem;
 }
 
 .header .subnav__menu a {
@@ -203,14 +251,16 @@ main {
 }
 
 main section {
-  padding: 6rem 0;
+  padding: 6rem 0 1rem;
 }
 
 main .first {
-  background-color: #efefef;
-  background: url(../../images/Header_BG.png);
+  background-color: #fff;
+  background: url(../../images/Header_BG.png) no-repeat;
   background-position-y: -90px;
   background-size: cover;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 main .first h1 {
@@ -223,10 +273,31 @@ main .first__subheader {
 
 main .first .cards {
   margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1100px) {
+  main .first .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 main .first .cards .card {
-  width: 34.5rem;
+  width: 35.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 3.5rem;
+}
+
+@media screen and (max-width: 1100px) {
+  main .first .cards .card {
+    padding: 3.5rem 0;
+  }
 }
 
 main .first .cards .card__image {
@@ -246,5 +317,69 @@ main .first .cards .card__text {
   font-size: .7rem;
   font-weight: 100;
   font-size: 1.5rem;
+}
+
+main .second__title {
+  color: #9000ff;
+}
+
+main .second__text {
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+main .third__title {
+  color: #100813;
+}
+
+main .third__text {
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+main .third .table {
+  margin-top: 5rem;
+  background: url("../../images/tableBG.png") no-repeat center center;
+}
+
+main .third .table ul {
+  list-style: none;
+}
+
+main .third .table ul:first-child li {
+  text-align: left;
+  padding: 0;
+}
+
+main .third .table ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.35rem;
+  width: 100%;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  overflow: hidden;
+}
+
+main .third .table ul li:first-child {
+  height: 7rem;
+}
+
+main .third .table ul li:not(:last-child) {
+  border-bottom: 1px solid lightgrey;
+}
+
+main .third .table ul.second_column {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px 0 0 15px;
+  -webkit-box-shadow: 0px 0px 24px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 24px -9px rgba(0, 0, 0, 0.75);
+}
+
+main .third .table ul.third_column {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0 15px 15px 0;
 }
 /*# sourceMappingURL=styles.css.map */

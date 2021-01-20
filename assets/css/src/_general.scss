@@ -1,6 +1,8 @@
 *{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: $Bd;
     
 }
 
@@ -19,8 +21,7 @@ nav{
 }
 
 /*typography*/
-h1, h2, h3, p, a{
-    font-family: $Bd;
+h1, h2, h3, p, a, li{
     color: $text-color;
 }
 
@@ -28,7 +29,21 @@ h1{
     font-size: 3.8rem;
 }
 
-p{
+.heading{
+    letter-spacing: 1;
+    &__small{
+        font-size: 1.9rem;
+    }
+    &__big{
+        font-size: 3rem;
+    }
+    &__huge{
+        font-size: 3rem;
+    }
+
+}
+
+p, li{
     font-size: 1.4rem;   
     line-height: 1.3;
 }
@@ -36,11 +51,30 @@ p{
 a{
     text-decoration: none;
 }
+
+.main_color{
+    color: $main-color;
+} 
+/*utils*/
+.center{
+    text-align: center;
+}
+
 /*grid*/
+.container{
+    padding: 6rem 4rem 1rem;
+    max-width: $cont-width;
+    text-align: center;
+    margin: auto;
+    // box-sizing: content-box;
+}
+
 .row{
     display: flex;
-    flex-direction: row;
-    &__center{
+    flex-direction: row; 
+
+    &--center{
+        @extend .row;
         justify-content: center;
     }
 }
@@ -49,12 +83,21 @@ a{
     display: flex;
     flex-direction: column;
     overflow: auto;
-    &__center{
+    &--center{
+        @extend .column;
         align-items: center;
     }
 }
 
-.center{
-    // justify-content: center;
-    text-align: center;
+.col-3{
+width: ($cont-width/12)*3;
+}
+.col-4{
+    width: ($cont-width/12)*4;
+}
+.col-5{
+    width: ($cont-width/12)*5;
+}
+.col-6{
+    width: ($cont-width/12)*6;
 }

@@ -2,19 +2,22 @@
     position: fixed;
     height: auto;
     top: 0px;
-    transition: top 0.5s ease-in-out; //animation
+    transition: top 0.6s ease-in-out; //animation
     width: 100%;
-    box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+    box-shadow: $box-shadow;
     z-index: 1;
     .topnav{
+        @extend .row;
         padding: 0 1.3rem;
         height: 6.1rem;
         align-items: center;
         background-color: $main-bg-color;
+        
         &__logo{
             width: 10.5rem;
         }
         &__menu{
+            @extend .row;
             margin-left: auto;
         margin-right: 2.5rem;
         width: 31%;
@@ -42,10 +45,11 @@
     }
     .subnav{
         align-items: center;
-        background-color: $main-bg-color;        
+        background-color: $main-bg-color;   
+        @extend .row--center;     
         &__menu{
-            width: 37.5%;
-
+            width: 70rem;
+            @extend .row--center;
             // justify-content: sspace-evenly;
             a{
                 font-family: $Roman;
