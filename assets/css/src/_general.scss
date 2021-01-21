@@ -8,7 +8,10 @@
 }
 
 html{
-    font-size: 10px;
+    font-size: 11px; //modified font root for big screens
+    @include mediumscreen{
+        font-size: 10px; //original font size
+    }
     body{
         margin: 0;
         padding: 0; 
