@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./assets/css/dist/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
     <title>David Seveloff test</title>
 </head>
 <body>
     <!-- header -->
-    <header class="header column"> 
+    <header class="header column">
+
         <nav class="topnav">
             <a href="#">
                 <img src="./assets/images/codicatelogo.svg" alt="site logo" class="topnav__logo" /> 
             </a>
-           
+           <div class="topnav__bars"><i class="fas fa-bars fa-2x"></i></div>    
             <ul class="topnav__menu">
                 <li>
                     <a href="#">EA</a>
@@ -33,6 +36,7 @@
                 <li>
                     <a href="#">ODIO</a>
                 </li>
+            
             </ul>    
             <a href="#" class="topnav__cta">DUIS DOLORE TE</a>        
         </nav>
@@ -61,17 +65,17 @@
             <p class="first__subheader">Lorem ipsum dolor sit amet consectetur adipisici elit,</p>
             
             <section id="cards" class="cards">
-                <article class="card column column__center">
+                <article class="card">
                     <img src="./assets/images/HappyEmployees.svg" alt="iamge alt" class="card__image">
                     <header class="card__header">Lorem ipsum dolor sit</header>
                     <p class="card__text">amet, consectetur adipisicing elit. Saepe temporibus perspiciatis voluptatum</p>
                 </article>
-                <article class="card column__center">
+                <article class="card">
                     <img src="./assets/images/Say yes to BYOD.svg" alt="iamge alt" class="card__image">
                     <header class="card__header">Lorem ipsum dolor sit</header>
                     <p class="card__text">amet, consectetur adipisicing elit. Saepe temporibus perspiciatis voluptatum</p>
                 </article>
-                <article class="card column__center">
+                <article class="card">
                     <img src="./assets/images/Save on it Spend.svg" alt="iamge alt" class="card__image">
                     <header class="card__header">Lorem ipsum dolor sit</header>
                     <p class="card__text">amet, consectetur adipisicing elit. Saepe temporibus perspiciatis voluptatum</p>
@@ -79,13 +83,13 @@
             </section>
         
         </section> <!-- /#first-->
-        <section id="second" class="second column column__center container">
-            <h2 class="heading heading__small second__title">Lorem ipsum dolor sit, amet,</h2>
-            <p class="second__text bold center">consectetur adipisicing elit. Saepe temporibus perspiciatis voluptatum, eius debitis quod mollitia veritatis nam iusto ut laboriosam commodi alias inventore a deserunt illum, unde dolor sapiente!consectetur adipisicing elit. Saepe temporibus perspiciatis voluptatum, eius debitis quod mollitia veritatis nam iusto ut laboriosam commodi alias inventore a deserunt illum, unde dolor sapiente!quod mollitia veritatis nam iusto ut laboriosam commodi alias inventore a deserunt illum, unde dolor sapiente!consectetur adipisicing elit. Saepe temporibus perspiciatis voluptatum, eius debitis quod mollitia veritatis nam iusto ut veritatis nam iusto ut </p>
+        <section id="second" class="second container">
+            <h2 class="second__title">Lorem ipsum dolor sit, amet,</h2>
+            <p class="second__text bold">consectetur adipisicing elit. Saepe temporibus perspiciatis voluptatum, eius debitis quod mollitia veritatis nam iusto ut laboriosam commodi alias inventore a deserunt illum, unde dolor sapiente!consectetur adipisicing elit. Saepe temporibus perspiciatis voluptatum, eius debitis quod mollitia veritatis nam iusto ut laboriosam commodi alias inventore a deserunt illum, unde dolor sapiente!quod mollitia veritatis nam iusto ut laboriosam commodi alias inventore a deserunt illum, unde dolor sapiente!consectetur adipisicing elit. Saepe temporibus perspiciatis voluptatum, eius debitis quod mollitia veritatis nam iusto ut veritatis nam iusto ut </p>
         </section> <!-- /#second-->
         <section id="third" class="third column column__center container">
-            <h2 class="heading heading__big third__title">Lorem ipsum dolor</h2>
-            <div class="table row row__center">
+            <h2 class="third__title">Lorem ipsum dolor</h2>
+            <div class="table">
                 <ul class="column first_column col-4">
                     <li></li>
                     <li>Lorem ipsum dolor</li>
@@ -96,8 +100,9 @@
                     <li>Lorem ipsum dolor</li>
                     <li>Lorem ipsum dolor</li>
                     <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
                 </ul>
-                <ul class="column column__center second_column col-4 ">
+                <ul class="second_column col-4 ">
                     <li class="heading__small main_color">Lorem</li>
                     <li>Lorem ipsum dolor</li>
                     <li>Lorem ipsum dolor</li>
@@ -106,9 +111,10 @@
                     <li>Lorem ipsum dolor</li>
                     <li>Lorem ipsum dolor</li>
                     <li>Lorem ipsum dolor</li>
-                    <li>Lorem ipsum dolor</li>
+                    <li class="v"></li>
+                    <li class="v"></li>
                 </ul>
-                <ul class="column  column__center third_column col-4">
+                <ul class="third_column col-4">
                     <li class="heading__small">Lorem</li>
                     <li>Lorem ipsum dolor</li>
                     <li>Lorem ipsum dolor</li>
@@ -117,19 +123,102 @@
                     <li>Lorem ipsum dolor</li>
                     <li>Lorem ipsum dolor</li>
                     <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>  
                     <li>Lorem ipsum dolor</li>
                 </ul>
             </div>
         </section> <!-- /#third-->
-        <section id="forth">
-
+        <section id="forth" class="forth">
+            <h2 class="forth__title">Lorem ipsum dolor sit amet consectetur adipisici elit sed eiusmod</h2>
+            <div class="forth__cont">
+                <p class="forth__cont--text">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+                <a href="#" class="forth__cont--btn">ut aliquip ex</a>
+            </div>
         </section> <!-- /#forth-->
-        <section id="fifth">
-
+        <section id="fifth" class="fifth">
+            <div class="fifthcont">
+                <div class="fifthcont__leftcol">
+                    <h2 class="fifthcont__leftcol--title">Lorem Ipsum</h2>
+                    <h3 class="fifthcont__leftcol--subtitle">Lorem ipsum dolor sit amet, consectetur</h3>
+                    <p class="fifthcont__leftcol--text">adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                    <a class="fifthcont__leftcol--btn">laboris</a>
+                </div>
+                <div class="fifthcont__rightcol">
+                    <img src="./assets//images/blurred-paper.png" class="fifthcont__rightcol--img" alt="blurred image">
+                </div>
+            </div>
+            
         </section> <!-- /#fifth-->
     </main>
-    <footer>
+    <footer class="footer">
+        <div class="footer__col">
+            <div class="footer__col--title">
+                Lorem
+            </div>
+            <ul class="footer__col--menu">
+                <li><a href="#">Ipsum</a></li>
+                <li><a href="#">dolor</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <div class="footer__col--title">
+                Lorem
+            </div>
+            <ul class="footer__col--menu">
+                <ul class="footer__col--menu">
+                    <li><a href="#">ipsum dolor sit amet</a></li>
+                    <li><a href="#">consectetur adipiscing elit,</a></li>
+                    <li><a href="#">sed do eiusmod tempor incididunt ut,</a></li>
+                    <li><a href="#">ut labore et dolore magna aliqua,</a></li>
+                    <li><a href="#">consectetur adipiscing elit,</a></li>
+                </ul>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <div class="footer__col--title">
+                Lorem
+            </div>
+            <ul class="footer__col--menu">
+                <li><a href="#">ipsum dolor sit amet</a></li>
+                <li><a href="#">consectetur adipiscing elit,</a></li>
+                <li><a href="#">sed do eiusmod tempor incididunt ut,</a></li>
+                <li><a href="#">ut labore et dolore magna aliqua,</a></li>
+                <li><a href="#">consectetur adipiscing elit,</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <div class="footer__col--title">
+                Lorem
+            </div>
+            <ul class="footer__col--menu-horizontal">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-medium-m"></i></a></li>
+            </ul>
 
+            <div class="footer__col--title">
+                Lorem
+            </div>
+
+            <ul class="footer__col--menu">
+                <li><a href="#">ipsum dolor sit amet</a></li>
+                <li><a href="#">consectetur adipiscing elit,</a></li>
+                <li><a href="#">sed do eiusmod tempor incididunt ut,</a></li>
+                <li><a href="#">ut labore et dolore magna aliqua,</a></li>
+                <li><a href="#">consectetur adipiscing elit,</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <ul class="footer__col--menu">
+                <li><a href="#"><img src="./assets/images/main_07.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./assets/images/main_09.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./assets/images/main_10.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./assets/images/main_11.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./assets/images/ccimage_12.jpg" alt=""></a></li>
+            </ul>
+        </div>
     </footer>
     <script src="./assets/js/main.js"></script>
 </body>
