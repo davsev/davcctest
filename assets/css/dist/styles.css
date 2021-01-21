@@ -164,34 +164,6 @@ a:hover {
           align-items: center;
 }
 
-.col-1 {
-  width: 6.41667rem;
-}
-
-.col-2 {
-  width: 6.41667rem;
-}
-
-.col-3 {
-  width: 19.25rem;
-}
-
-.col-4 {
-  width: 25.66667rem;
-}
-
-.col-5 {
-  width: 32.08333rem;
-}
-
-.col-6 {
-  width: 38.5rem;
-}
-
-.col-12 {
-  width: 77rem;
-}
-
 .header-up {
   top: -6.1rem !important;
 }
@@ -519,11 +491,6 @@ main .third .table ul li:not(:last-child) {
 
 main .third .table ul li.v {
   background: url(../../images/V_icon.svg) no-repeat center center;
-  background-size: 10%;
-}
-
-main .third .table ul li.x {
-  background: url(../../images/X_icon.svg) no-repeat center center;
   background-size: 10%;
 }
 

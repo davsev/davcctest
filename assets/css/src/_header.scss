@@ -48,17 +48,18 @@
 
              } 
 
-             &--close{
-                 display: none;
-                 @include mobile{
+            &--close{
+                display: none;
+                @include mobile{
                     color: #fff;
                     display: flex;
                     border: 1px solid #000;
                     border-radius: 5rem;
                     background-color: $main-color;
                     justify-content: center;
-                 }
-             }
+                }
+            }
+            
             a{
                 font-family: $Bd;
                 font-weight: 700;
@@ -83,7 +84,7 @@
                 }
                 
         }    
-    }
+    } //topnav
     .subnav{
         align-items: center;
         background-color: $main-bg-color;   
@@ -91,7 +92,7 @@
         &__menu{
             width: 70rem;
             @extend .row--center;
-            // justify-content: sspace-evenly;
+            
             a{
                 font-family: $Roman;
                 font-size: 1.2rem;
@@ -105,8 +106,7 @@
                 }
             }
         }
-
-    }
+    } //subnav
 } // ./header
 
 

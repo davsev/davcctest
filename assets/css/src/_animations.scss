@@ -2,7 +2,7 @@
     top: -6.1rem !important; // same as header height. use variables in LESS/SASS
   }
 
-  .open {
+  .open { //open menu in mobile mq
     display: flex !important;
     height: 100vh;
   }

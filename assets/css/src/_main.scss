@@ -21,6 +21,7 @@ main{
         @include mobile{
             background-color: #fff;
         }
+      
         h1{
             color: $main-color;
             @extend .center;
@@ -68,10 +69,10 @@ main{
                     font-weight: 100;
                     font-size: 1.5rem;
                 }
-            }
+            } //card
+        } //cards
+    } //first
 
-        } 
-    }
     .second{
         &__title{
             color:$main-color;
@@ -79,22 +80,25 @@ main{
             @extend .heading__small;
 
         }
+        
         &__text{
             @extend .center;
             font-family: $Md;
             margin-top: 2rem;
             line-height: 1.6;
         }
-    }
+    } // /second
     .third{
         margin-top: -3.9rem;
         padding-bottom: 9rem;
+        
         &__title{
             color:$text-color;
             @extend .center;
             @extend .heading__big;
 
         }
+        
         &__text{
             margin-top: 2rem;
             line-height: 1.6;
@@ -106,11 +110,11 @@ main{
             margin-top: 5rem;
             background: url('../../images/tableBG.png') no-repeat center center;
 
-            
             ul{
                 flex: 1;
                 list-style: none;
-                &:first-child{ //first ul in table
+               
+                &:first-child{ //first ul in table    
                     li{
                         font-family: $Bd;
                         text-align: left;
@@ -133,6 +137,7 @@ main{
                     &:first-child{ //first li in each ul
                         height: 7rem;
                     }
+                   
                     &:not(:last-child){ //every li except last in each ul
                         border-bottom: 1px solid lightgrey;
                     }
@@ -140,24 +145,20 @@ main{
                     &.v{
                         background: url(../../images/V_icon.svg) no-repeat center center;
                         background-size: 10%;
-                    }
-                    &.x{
-                        background: url(../../images/X_icon.svg) no-repeat center center;
-                        background-size: 10%;
-                    }
-                }
+                    }           
+                } //.li
             
-             &.second_column{
-                 background-color: rgba(255,255,255, 0.8);
-                 border-radius: 15px 0 0 15px;
-                 box-shadow: 0px 0px 24px -9px rgba(0,0,0,0.75);
-             }   
-             &.third_column{
-                 background-color: rgba(0,0,0, 0.05);
-                 border-radius: 0 15px 15px 0;
-                
-             }   
-            }
+                &.second_column{
+                    background-color: rgba(255,255,255, 0.8);
+                    border-radius: 15px 0 0 15px;
+                    box-shadow: 0px 0px 24px -9px rgba(0,0,0,0.75);
+                }   
+                &.third_column{
+                    background-color: rgba(0,0,0, 0.05);
+                    border-radius: 0 15px 15px 0;
+                    
+                }   
+            }  // /&--btn
         } // /.table
     } //.third
     .forth{
@@ -206,22 +207,19 @@ main{
                 letter-spacing: 0.015rem;
                 text-transform: uppercase;
                 box-shadow: 0px 0px 24px -9px rgba(0,0,0,0.75);
-
-                
-            }
-        }
+            } //.&--btn{
+        } //.&__cont{
     } // .forth
+  
     .fifth{
-    //   background-color: #f9fbfa;
-        // background: url(../../images/Enterprise_BG.png) no-repeat center center;
-
         background: url(../../images/linebg_02.jpg) repeat-x;
         background-position-x: center;
 
         @include mobile{
             text-align: center
         }
-       .fifthcont{
+      
+        .fifthcont{
             background-size: cover;
             padding-top: 2.5rem;
             @extend .row--center;
@@ -238,20 +236,23 @@ main{
                  @include mobile{
                    margin-bottom: 4rem;
                 }
+              
                 &--title{
                     color: $main-color;
                     @extend .heading__huge;
                 }
+              
                 &--subtitle{
                     padding-top: 1.3rem;
                     @extend .heading__small;
                 }
+            
                 &--text{
                     margin-top: .8rem;
                     line-height: 1.6;
-                    font-weight: 100
-                
+                    font-weight: 100 
                 }
+              
                 &--btn{
                     @include button($main-color, $white);
                     margin-top: 1.8rem;
@@ -264,11 +265,9 @@ main{
                     @include mobile{
                         align-self: center;
                         z-index: 1;
-                    }
-                    
+                    }   
                 }
-
-            }
+            } //.__leftcol
 
             &__rightcol{
                 flex: 1;
@@ -278,9 +277,7 @@ main{
                     right: 3.7rem;
                     bottom: 2.8rem;
                 }
-               
             }
-        }
-
-    }
-}
+        } //.fifthcont
+    } //.fifth
+} //.main

@@ -34,16 +34,6 @@ function setUpEvents(){
       e.preventDefault();
       }, false);
     }
-
-    /* Any click outside of the nav element will close the menu if it's open */
-    var specifiedElement = document.querySelector('.topnav__menu');
-    document.addEventListener('click', function(event) {
-      var isClickInside = specifiedElement.contains(event.target);
-      if (!isClickInside && nav.className == "open") {
-        nav.className = "";
-      } 
-    });
-
 }
 
 
