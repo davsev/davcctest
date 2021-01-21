@@ -185,7 +185,7 @@ a:hover {
   width: 100%;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 999;
 }
 
 .header .topnav {
@@ -203,10 +203,19 @@ a:hover {
 
 @media screen and (max-width: 1100px) {
   .header .topnav__bars {
+    background-color: #fff;
+    width: 3.7rem;
+    height: 3.7rem;
+    text-align: center;
+    border-radius: 50%;
+    padding: .8rem;
     display: block;
-    position: absolute;
+    position: fixed;
     right: 2rem;
     z-index: 999;
+    top: 1.2rem;
+    -webkit-box-shadow: 0px 0px 24px -9px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 24px -9px rgba(0, 0, 0, 0.75);
   }
 }
 
@@ -251,12 +260,13 @@ a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    border: 1px solid #000;
-    border-radius: 5rem;
     background-color: #9000ff;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .header .topnav__menu--close:hover {
+    background-color: #fff;
   }
 }
 
@@ -299,7 +309,7 @@ a:hover {
 @media screen and (max-width: 1100px) {
   .header .topnav__cta {
     margin-left: auto;
-    margin-right: 4rem;
+    margin-right: 5rem;
   }
 }
 

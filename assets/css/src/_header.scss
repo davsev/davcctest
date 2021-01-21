@@ -5,7 +5,7 @@
     transition: top 0.6s ease-in-out; //animation
     width: 100%;
     box-shadow: $box-shadow;
-    z-index: 1;
+    z-index: 999;
 
 
     .topnav{
@@ -18,10 +18,20 @@
         &__bars{
             display: none;
             @include mobile{
+                background-color: $white;
+                width: 3.7rem;
+                height: 3.7rem;
+                text-align: center;
+                border-radius: 50%;
+                padding: .8rem;
                 display: block;
-                position: absolute;
+                position: fixed;
                 right: 2rem;
                 z-index: 999;
+                top: 1.2rem;
+                box-shadow: 0px 0px 24px -9px rgba(0,0,0,0.75);
+
+                
              } 
         }
         &__logo{
@@ -53,11 +63,15 @@
                 @include mobile{
                     color: #fff;
                     display: flex;
-                    border: 1px solid #000;
-                    border-radius: 5rem;
+                    
                     background-color: $main-color;
                     justify-content: center;
+                    &:hover{
+                        background-color: #fff;
+                    }
+                   
                 }
+              
             }
             
             a{
@@ -80,7 +94,7 @@
                 letter-spacing: 0.015rem;
                 @include mobile{
                     margin-left: auto;
-                    margin-right: 4rem;
+                    margin-right: 5rem;
                 }
                 
         }    

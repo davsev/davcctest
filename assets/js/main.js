@@ -22,14 +22,22 @@ function setUpEvents(){
 
   const nav = document.querySelector(".topnav__menu"),
     navToggle = document.querySelector(".topnav__bars");
+    bars = document.querySelector(".topnav__bars>i");
     if (navToggle) {
       navToggle.addEventListener("click",
       function(e) {
-      console.log('dav');
       if (nav.classList.contains('open')){
-        nav.classList.remove('open');
+        nav.classList.remove('open'); 
+
+        //cahnge mobile menu icon
+        bars.classList.remove('fa-times');
+        bars.classList.add('fa-bars');
       } else {
         nav.classList.add('open');
+        //cahnge mobile menu icon
+ 
+        bars.classList.remove('fa-bars');
+        bars.classList.add('fa-times');
       }
       e.preventDefault();
       }, false);
