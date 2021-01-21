@@ -3,7 +3,8 @@
     padding: 0;
     margin: 0;
     font-family: $Bd;
-    
+    transition: all 0.1s ease-in;
+
 }
 
 html{
@@ -30,27 +31,45 @@ h1{
 }
 
 .heading{
-    letter-spacing: 1;
+    
     &__small{
+        font-family: $Bd;
+        letter-spacing: -.04rem;
         font-size: 1.9rem;
     }
     &__big{
+        font-family: $Bd;
         font-size: 3rem;
+        letter-spacing: -.1rem;
     }
     &__huge{
-        font-size: 3rem;
+        font-family: $Bd;
+        letter-spacing: -.08rem;
+        font-size: 4rem;
     }
 
 }
 
-p, li{
+li{
+    font-size: 1.4rem;   
+    line-height: 1.3;
+}
+p{
+    font-family: $Roman;
     font-size: 1.4rem;   
     line-height: 1.3;
 }
 
 a{
     text-decoration: none;
+    cursor: pointer; 
+
+    &:hover{
+        color: $main-color
+    }
 }
+
+
 
 .main_color{
     color: $main-color;
@@ -62,11 +81,15 @@ a{
 
 /*grid*/
 .container{
-    padding: 6rem 4rem 1rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     max-width: $cont-width;
-    text-align: center;
+    // text-align: center;
     margin: auto;
-    // box-sizing: content-box;
+    @include mobile{
+        padding: 6rem 2rem 1rem;
+        max-width: 100vw;
+    }
 }
 
 .row{
@@ -89,6 +112,14 @@ a{
     }
 }
 
+
+
+.col-1{
+width: ($cont-width/12)*1;
+}
+.col-2{
+width: ($cont-width/12)*1;
+}
 .col-3{
 width: ($cont-width/12)*3;
 }
@@ -100,4 +131,8 @@ width: ($cont-width/12)*3;
 }
 .col-6{
     width: ($cont-width/12)*6;
+}
+
+.col-12{
+    width: $cont-width;
 }

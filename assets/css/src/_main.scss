@@ -1,19 +1,26 @@
 main{
-    top: 91px;
-    position: relative;
-
+    padding-top: 91px;
+    background-color: #efefef;
+    @include mobile{
+        margin-top: 5.5rem;
+    }
     section{
-        padding: 6rem 0 1rem;
+        padding: 5.5rem 0 5.5rem; //fix to be responsive
+        @include mobile{
+            padding: unset;
+        }
     }
 
     .first{
-        background-color: #fff;
         background: url(../../images/Header_BG.png) no-repeat;
+        background-color: #fff;
         background-position-y: -90px;
         background-size: cover;
         box-shadow: $box-shadow;
         @extend .column;
-       
+        @include mobile{
+            background-color: #fff;
+        }
         h1{
             color: $main-color;
             @extend .center;
@@ -27,6 +34,7 @@ main{
         .cards{
             margin: 0 auto;
             flex-wrap: wrap;
+            padding: 6rem 0 0rem; //fix to be responsive
             @extend .row--center;
 
             @include mobile{
@@ -47,14 +55,14 @@ main{
                 }
 
                 &__header{
-                    margin-top: 1.9rem;
+                    margin-top: 1.4rem;
                     font-weight: bold;
                     font-family: $Bd;
                     font-size: 1.5rem;
                 }
 
                 &__text{
-                    font-family: $Md;
+                    font-family: $Roman;
                     margin-top: 1.3rem;
                     font-size: .7rem;
                     font-weight: 100;
@@ -67,15 +75,25 @@ main{
     .second{
         &__title{
             color:$main-color;
+            @extend .center;
+            @extend .heading__small;
+
         }
         &__text{
+            @extend .center;
+            font-family: $Md;
             margin-top: 2rem;
             line-height: 1.6;
         }
     }
     .third{
+        margin-top: -3.9rem;
+        padding-bottom: 9rem;
         &__title{
             color:$text-color;
+            @extend .center;
+            @extend .heading__big;
+
         }
         &__text{
             margin-top: 2rem;
@@ -83,31 +101,47 @@ main{
         }
 
         .table{
+            @extend .row--center;
+            @extend .center;
             margin-top: 5rem;
             background: url('../../images/tableBG.png') no-repeat center center;
-            // background-repeat: no-repeat;
+
+            
             ul{
                 list-style: none;
                 &:first-child{ //first ul in table
                     li{
+                        font-family: $Bd;
                         text-align: left;
                         padding: 0
                     }
                 }
 
                 li{  
+                    font-family: $Md;
                     align-items: center;
-                    height: 5.35rem;
+                    height: 5.5rem;
                     width: 100%;
                     text-align: center;
                     display: grid;
                     overflow: hidden;
+                    @include mobile{
+                        font-size: 1rem;
+                    }
                     
                     &:first-child{ //first li in each ul
                         height: 7rem;
                     }
                     &:not(:last-child){ //every li except last in each ul
                         border-bottom: 1px solid lightgrey;
+                    }
+                    &.v{
+                        background: url(../../images/V_icon.svg) no-repeat center center;
+                        background-size: 10%;
+                    }
+                    &.x{
+                        background: url(../../images/X_icon.svg) no-repeat center center;
+                        background-size: 10%;
                     }
                 }
             
@@ -122,6 +156,124 @@ main{
                 
              }   
             }
+        } // /.table
+    } //.third
+    .forth{
+        padding-top: 6.5rem;
+        @extend .column--center;
+        background: url(../../images/Enterprise_BG.png) no-repeat center center;
+
+        @include mobile{
+            flex-direction: column;
+            background-size: cover;
         }
+        &__title{
+            @extend .container;
+            @extend .heading__huge;
+            @extend .center;
+            color: $white;
+        }
+        &__cont{
+            @extend .row;
+            @extend .container;
+            margin-top: .5rem;
+            @include mobile{
+               text-align: center;
+                flex-direction: column;
+                
+               
+            }
+            &--text{
+                display: flex;
+                color: $white;
+                flex: 4;
+                line-height: 1.6;
+                font-weight: 100
+            }
+            &--btn{
+                @include button($white, $main-color);
+                display: flex;
+                
+                justify-self: center;
+                align-self: center;
+                font-size: 1.2rem;
+                padding: 1.6rem 5rem;
+                letter-spacing: 0.015rem;
+                text-transform: uppercase;
+                
+            }
+        }
+    } // .forth
+    .fifth{
+    //   background-color: #f9fbfa;
+        // background: url(../../images/Enterprise_BG.png) no-repeat center center;
+
+        background: url(../../images/linebg_02.jpg) repeat-x;
+        background-position-x: center;
+
+        @include mobile{
+            text-align: center
+        }
+       .fifthcont{
+            background-size: cover;
+            padding-top: 2.5rem;
+            @extend .row--center;
+            @extend .container;
+            @include mobile{
+                flex-direction: column;
+                background-color: rgb(240,243,243)
+            }
+
+            &__leftcol{
+                @extend .column;
+                justify-content: flex-start;
+                 flex: 1;
+                 @include mobile{
+                   margin-bottom: 4rem;
+                }
+                &--title{
+                    color: $main-color;
+                    @extend .heading__huge;
+                }
+                &--subtitle{
+                    padding-top: 1.3rem;
+                    @extend .heading__small;
+                }
+                &--text{
+                    margin-top: .8rem;
+                    line-height: 1.6;
+                    font-weight: 100
+                
+                }
+                &--btn{
+                    @include button($main-color, $white);
+                    margin-top: 1.8rem;
+                    justify-self: center;
+                    align-self: flex-start;
+                    font-size: 1.2rem;
+                    padding: 1.3rem 2.4rem;
+                    letter-spacing: 0.015rem;
+                    text-transform: uppercase;
+                    @include mobile{
+                        align-self: center;
+                        z-index: 1;
+                    }
+                    
+                }
+
+            }
+
+            &__rightcol{
+                flex: 1;
+                &--img{
+                    width: 100%;
+                    position: relative;
+                    right: 3.7rem;
+                    bottom: 2.8rem;
+                }
+               
+            }
+        }
+
     }
 }
